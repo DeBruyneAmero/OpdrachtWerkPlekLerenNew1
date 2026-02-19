@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Magische Pagina</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 400px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 30px;
+            background: white;
+            color: #764ba2;
+            font-size: 1em;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            background: #f1f1f1;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>✨ Welkom op deze Random Pagina ✨</h1>
+    <p>Deze pagina is volledig willekeurig gegenereerd.</p>
+</header>
+
+<div class="card">
+    <h2>Random Feit</h2>
+    <p id="fact">Klik op de knop voor een willekeurig feit!</p>
+    <button onclick="generateFact()">Genereer Feit</button>
+</div>
+
+<footer>
+    Gemaakt met pure HTML, CSS & een beetje JavaScript 🚀
+</footer>
+
+<script>
+    const facts = [
+        "Bananen zijn bessen, maar aardbeien niet.",
+        "Octopussen hebben drie harten.",
+        "Honing bederft nooit.",
+        "Een wolk kan meer dan een miljoen kilo wegen.",
+        "Je hersenen gebruiken ongeveer 20% van je energie."
+    ];
+
+    function generateFact() {
+        const randomIndex = Math.floor(Math.random() * facts.length);
+        document.getElementById("fact").innerText = facts[randomIndex];
+    }
+</script>
+
+</body>
+</html>
