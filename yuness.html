@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random HTML Pagina</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #4e73df, #1cc88a);
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        header {
+            padding: 40px 20px;
+        }
+
+        button {
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background-color: #f6c23e;
+            color: #333;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .card {
+            background: rgba(255,255,255,0.1);
+            margin: 20px auto;
+            padding: 20px;
+            width: 300px;
+            border-radius: 12px;
+            backdrop-filter: blur(8px);
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welkom op mijn Random Pagina 🎲</h1>
+        <p>Klik op de knop voor een willekeurige boodschap!</p>
+        <button onclick="toonBericht()">Klik hier</button>
+    </header>
+
+    <div class="card">
+        <p id="bericht">Hier verschijnt straks iets leuks...</p>
+    </div>
+
+    <footer>
+        &copy; 2026 Random HTML Demo
+    </footer>
+
+    <script>
+        function toonBericht() {
+            const berichten = [
+                "Je bent geweldig! 🚀",
+                "Vandaag wordt een goede dag! ☀️",
+                "Blijf leren en groeien! 🌱",
+                "Code is creativiteit! 💻",
+                "Blijf nieuwsgierig! 🔍"
+            ];
+
+            const randomIndex = Math.floor(Math.random() * berichten.length);
+            document.getElementById("bericht").textContent = berichten[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
